@@ -5,14 +5,23 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Đăng ký thông tin người dùng</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-<form action="#" method="post" name="login-form">
+<header>
+    <div class="header-content">
+        <p class="slogan">Nhanh chóng - Chính xác - Tiện lợi</p>
+        <img src="" alt="logo">
+        <h1>Webside đăng kí</h1>
+    </div>
+</header>
+<form name="login-form" id="registerForm">
     <div>
         <h2>Đăng ký thông tin người dùng</h2>
     </div>
+
     <div class="login-box">
         <div class="form-group">
             <label for="fullname">Full name</label>
@@ -21,44 +30,41 @@
         </div>
         <div class="form-group">
             <label for="email">Email</label>
-            <input type="text" id="email" placeholder="exmaple@gmail.com">
+            <input type="email" id="email" placeholder="exmaple@gmail.com">
             <small class="msg-error"></small>
         </div>
         <div class="form-group">
             <label for="phoneNumber">Phone</label>
             <input type="text" id="phoneNumber" placeholder="Enter your phone number">
+            <small class="msg-error"></small>
         </div>
         <div class="form-group">
             <div class="radio-group">
-                <input type="radio" name="gender" id="male"> <label for="male">Nam</label>
-                <input type="radio" name="gender" id="female"> <label for="female">Nữ</label>
-                <input checked type="radio" name="gender" id="other"> <label for="other">Other</label>
+                <input type="radio" name="gender" id="male" value="male"> <label for="male">Nam</label>
+                <input type="radio" name="gender" id="female" value="female"> <label for="female">Nữ</label>
+                <input checked type="radio" name="gender" id="other" value="other"> <label for="other">Other</label>
             </div>
+            <small class="msg-error"></small>
         </div>
         <div class="form-group checkbox">
             <label>Hobby</label>
-            <div>
-                <input type="checkbox">
-                <label>Football</label>
-            </div>
-            <div>
-                <input type="checkbox">
-                <label>Move</label>
-            </div>
-            <div>
-                <input type="checkbox">
-                <label>Badminton</label>
-            </div>
-            <div>
-                <input type="checkbox">
-                <label>Swim</label>
-            </div>
-            <div>
-                <input type="checkbox">
-                <label>Other</label>
-            </div>
+            <div><input type="checkbox" value="Football"><label>Football</label></div>
+            <div><input type="checkbox" value="Move"><label>Move</label></div>
+            <div><input type="checkbox" value="Badminton"><label>Badminton</label></div>
+            <div><input type="checkbox" value="Swim"><label>Swim</label></div>
+            <div><input type="checkbox" value="Other"><label>Other</label></div>
         </div>
+        <div class="form-group">
+            <label>Giới thiệu bản thân</label>
+            <textarea id="intro" rows="3"></textarea>
+        </div>
+
+        <button type="submit">Đăng ký</button>
     </div>
 </form>
+<div id="result" style="display:none;"></div>
+<footer>
+    Student: Ti Nguyen | Email: phuctien1304@email.com | Lớp: T2512E
+</footer>
 </body>
 </html>
