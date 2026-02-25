@@ -12,8 +12,8 @@
 <body>
 <header>
     <div class="header-content">
-        <p class="slogan">Nhanh chóng - Chính xác - Tiện lợi</p>
-        <img src="" alt="logo">
+        <h2 class="slogan">Chuẩn nhưng vẫn phải chỉnh</h2>
+        <img src="img/avt.jpg" alt="logo">
         <h1>Webside đăng kí</h1>
     </div>
 </header>
@@ -24,47 +24,62 @@
 
     <div class="login-box">
         <div class="form-group">
-            <label for="fullname">Full name</label>
-            <input type="text" id="fullname" placeholder="Enter your name">
+            <label for="fullName">Full name</label>
+            <input type="text" id="fullName" placeholder="Enter your name.." name="fullName">
             <small class="msg-error"></small>
         </div>
         <div class="form-group">
             <label for="email">Email</label>
-            <input type="email" id="email" placeholder="exmaple@gmail.com">
+            <input type="email" id="email" placeholder="exmaple@gmail.com" name="email">
             <small class="msg-error"></small>
         </div>
         <div class="form-group">
             <label for="phoneNumber">Phone</label>
-            <input type="text" id="phoneNumber" placeholder="Enter your phone number">
+            <input type="text" id="phoneNumber" placeholder="Enter your phone number.." name="phoneNumber">
             <small class="msg-error"></small>
         </div>
         <div class="form-group">
-            <div class="radio-group">
-                <input type="radio" name="gender" id="male" value="male"> <label for="male">Nam</label>
-                <input type="radio" name="gender" id="female" value="female"> <label for="female">Nữ</label>
-                <input checked type="radio" name="gender" id="other" value="other"> <label for="other">Other</label>
-            </div>
+            <label for="gender">Gender</label>
+            <select id="gender" name="gender">
+                <option value="">Choice</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
             <small class="msg-error"></small>
         </div>
+<!--        <div class="form-group">-->
+<!--            <label>Gender</label></label>-->
+<!--            <div class="radio-group">-->
+<!--                <input type="radio" name="gender" id="male" value="male"> <label for="male">Nam</label>-->
+<!--                <input type="radio" name="gender" id="female" value="female"> <label for="female">Nữ</label>-->
+<!--                <input checked type="radio" name="gender" id="other" value="other"> <label for="other">Other</label>-->
+<!--            </div>-->
+<!--            <small class="msg-error"></small>-->
+<!--        </div>-->
         <div class="form-group checkbox">
             <label>Hobby</label>
-            <div><input type="checkbox" value="Football"><label>Football</label></div>
-            <div><input type="checkbox" value="Move"><label>Move</label></div>
-            <div><input type="checkbox" value="Badminton"><label>Badminton</label></div>
-            <div><input type="checkbox" value="Swim"><label>Swim</label></div>
-            <div><input type="checkbox" value="Other"><label>Other</label></div>
+            <div class="checkbox-group">
+
+            <label><input type="checkbox" value="Play football" name="hobby">Play football</label>
+            <label><input type="checkbox" value="Watching movie" name="hobby">Watching movie</label>
+            <label><input type="checkbox" value="Play badminton" name="hobby">Play badminton</label>
+            <label><input type="checkbox" value="Swimming" name="hobby">Swimming</label>
+            <label><input type="checkbox" value="Other" name="hobby">Other</label>
+            </div>
         </div>
         <div class="form-group">
             <label>Giới thiệu bản thân</label>
             <textarea id="intro" rows="3"></textarea>
         </div>
 
-        <button type="submit">Đăng ký</button>
+        <button type="submit" id="btn-submit">Đăng ký</button>
     </div>
 </form>
 <div id="result" style="display:none;"></div>
 <footer>
     Student: Ti Nguyen | Email: phuctien1304@email.com | Lớp: T2512E
 </footer>
+<script src="js/index.js"></script>
 </body>
 </html>
