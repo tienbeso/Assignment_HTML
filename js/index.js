@@ -10,9 +10,15 @@ function showError(input, message) {
     error.innerText = message;
     error.style.color = 'red';
 }
-
+function clearError() {
+    let errors = document.querySelectorAll('.msg-error');
+    errors.forEach(function(el) {
+        el.innerText = "";
+    });
+}
 function validateForm(e) {
     e.preventDefault();
+    clearError();
     let fullName = inputFullName.value.trim();
     let email = inputEmail.value.trim();
     let phone = inputPhone.value.trim();
